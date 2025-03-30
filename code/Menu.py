@@ -16,7 +16,7 @@ class Menu:
         pg.mixer_music.play(-1)
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(50, "The Scientist's Hunt", COLOR_ORANGE, (600,130))
+            self.menu_text(50, "The Scientist's Hunt", COLOR_WHITE, (600,130))
             
             for i in range(len(MENU_OPTION)):
                 self.menu_text(30, MENU_OPTION[i], COLOR_WHITE, (200,400 + 30*i))

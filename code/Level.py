@@ -3,7 +3,7 @@ import sys
 from tkinter.font import Font
 import pygame as pg
 
-from code.Const import COLOR_WHITE, EVENT_ENEMY, MENU_OPTION, WIN_HEIGHT
+from code.Const import COLOR_CIANO, COLOR_GREEN, COLOR_WHITE, EVENT_ENEMY, MENU_OPTION, WIN_HEIGHT
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory
 from code.EntityMediator import EntityMediator
@@ -38,6 +38,11 @@ class Level:
                     shoot = ent.shoot()
                     if shoot is not None:
                         self.entity_list.append(shoot)
+                if ent.name == 'Player1':
+                    self.level_text(14, f'Player1 - Health: {ent.health} | Score: {ent.score}', COLOR_GREEN, (10, 25))
+                if ent.name == 'Player2':
+                    self.level_text(14, f'Player2 - Health: {ent.health} | Score: {ent.score}', COLOR_CIANO, (20, 45)) 
+        
             for event in pg.event.get():
                 if event.type == pg.QUIT:
                     pg.quit()

@@ -1,9 +1,11 @@
 #C
 COLOR_ORANGE = (182,57,16)
 COLOR_WHITE = (255,255,255)
+COLOR_YELLOW = (255,255,0)
 
 #M
 MENU_OPTION = ('NEW GAME',
+               'COOPERATIVE MODE',
                'CARACTER SELECT',
                'SCORE',
                'EXIT')

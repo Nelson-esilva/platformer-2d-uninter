@@ -1,11 +1,14 @@
-from code.Const import ENTITY_SPEED, PLAYER_KEY_LEFT, PLAYER_KEY_RIGHT, WIN_HEIGHT, WIN_WIDTH
+from code.Const import ENTITY_SHOT_DELAY, ENTITY_SPEED, PLAYER_KEY_LEFT, PLAYER_KEY_RIGHT, PLAYER_KEY_SHOOT, WIN_HEIGHT, WIN_WIDTH
 from code.Entity import Entity
 import pygame as pg
+
+from code.PlayerShot import PlayerShot
 
 class Player(Entity):
     
     def __init__(self, name, position):
         super().__init__(name, position)
+        self.shot_delay = ENTITY_SHOT_DELAY[self.name]
           
     
     def move(self):
@@ -20,3 +23,11 @@ class Player(Entity):
             self.rect.centerx -= ENTITY_SPEED[self.name]
         if pressed_key[PLAYER_KEY_RIGHT[self.name]] and self.rect.right > WIN_WIDTH:
             self.rect.centerx += ENTITY_SPEED[self.name]
+
+    def shoot(self):
+        self.shot_delay -= 1
+        if self.shot_delay == 0:
+            self.shot_delay = ENTITY_SHOT_DELAY[self.name]
+            pressed_key = pg.key.get_pressed()
+            if pressed_key[PLAYER_KEY_SHOOT[self.name]]:
+                return PlayerShot(name=f'{self.name}Shot',position= (self.rect.centerx, self.rect.centery))

@@ -19,6 +19,8 @@ ENTITY_SPEED ={
     'Player2'  : 3,
     'Enemy1'   : 4,
     'Enemy2'   : 4,
+    'Player1Shot'  : 2,
+    'Player2Shot'  : 2,
 }
 
 EVENT_ENEMY = pg.USEREVENT + 1
@@ -37,6 +39,13 @@ ENTITY_HEALT = {
     'Player2'  : 300,
     'Enemy1'    : 60,
     'Enemy2'    : 90,
+    'Player1Shot': 1,
+    'Player2Shot': 1,
+}
+
+ENTITY_SHOT_DELAY = {
+    'Player1' : 20,
+    'Player2' : 20,
 }
     
 #M

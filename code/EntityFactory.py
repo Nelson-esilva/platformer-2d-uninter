@@ -1,5 +1,8 @@
+import random
 import pygame as pg
 
+from code.Enemy import Enemy
+from code.Player import Player
 from code.Background import Background
 from code.Const import WIN_WIDTH
 
@@ -14,3 +17,15 @@ class EntityFactory:
                     list_bg.append(Background(f'Level1Bg{i}', position=(0,0)))
                     list_bg.append(Background(f'Level1Bg{i}', position=(WIN_WIDTH,0)))
                 return list_bg
+    
+            case 'Player1':
+                return Player('Player1', (WIN_WIDTH/2,500))
+            
+            case 'Player2':
+                return Player('Player2', (WIN_WIDTH/3,500))
+            
+            case 'Enemy1':
+                return Enemy('Enemy1', (WIN_WIDTH + 20, 500))
+            
+            case 'Enemy2':
+                return Enemy('Enemy2', (WIN_WIDTH + 20, 500)) #random.randint(0, WIN_WIDTH)

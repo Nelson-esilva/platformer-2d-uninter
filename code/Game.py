@@ -96,12 +96,12 @@ class Game:
 
             clock.tick(60)
 
-def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
-    # Mantido igual ao original
-    text_font = pg.font.SysFont("Lucida Sans Typewriter", text_size, bold=(text == "HOW TO PLAY"))
-    text_surf = text_font.render(text, True, text_color).convert_alpha()
-    text_rect = text_surf.get_rect(center=text_center_pos)
-    self.window.blit(source=text_surf, dest=text_rect)
+    def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
+        # Mantido igual ao original
+        text_font = pg.font.SysFont("Lucida Sans Typewriter", text_size, bold=(text == "HOW TO PLAY"))
+        text_surf = text_font.render(text, True, text_color).convert_alpha()
+        text_rect = text_surf.get_rect(center=text_center_pos)
+        self.window.blit(source=text_surf, dest=text_rect)
 
 
 

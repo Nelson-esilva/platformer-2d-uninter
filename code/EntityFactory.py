@@ -7,6 +7,13 @@ from code.Background import Background
 from code.Const import WIN_WIDTH
 
 class EntityFactory:
+    
+    class EntityFactory:
+        _current_level = 1  # Variável de classe
+
+    @classmethod
+    def set_level(cls, level):
+        cls._current_level = level
 
     @staticmethod
     def get_entity(entity_name: str, position=(0,0)):
@@ -30,7 +37,7 @@ class EntityFactory:
                 return Player('Player2', (WIN_WIDTH/3,200))
             
             case 'Enemy1':
-                return Enemy('Enemy1', (WIN_WIDTH + 20, random.randint(200, 350)))
+                return Enemy('Enemy1', (WIN_WIDTH + 20, random.randint(200, 300)))
             
             case 'Enemy2':
-                return Enemy('Enemy2', (WIN_WIDTH + 20, random.randint(400, 800)))
+                return Enemy('Enemy2', (WIN_WIDTH + 20, random.randint(400, 350)))

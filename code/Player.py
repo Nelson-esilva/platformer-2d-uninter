@@ -13,7 +13,7 @@ class Player(Entity):
     
     def move(self):
         pressed_key = pg.key.get_pressed()
-        if pressed_key[PLAYER_KEY_UP[self.name]] and self.rect.top > 450:
+        if pressed_key[PLAYER_KEY_UP[self.name]] and self.rect.top > 200:
             self.rect.centery -= ENTITY_SPEED[self.name]
         if pressed_key[PLAYER_KEY_DOWN[self.name]] and self.rect.bottom < WIN_HEIGHT:
             self.rect.centery += ENTITY_SPEED[self.name]

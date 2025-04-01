@@ -57,8 +57,8 @@ ENTITY_DAMAGE = {
     'Level2Bg8': 0,
     'Player1'  : 1,
     'Player2'  : 1,
-    'Enemy1'    : 1,
-    'Enemy2'    : 1,
+    'Enemy1'    : 3,
+    'Enemy2'    : 3,
     'Player1Shot': 30,
     'Player2Shot': 30,
 }
@@ -83,8 +83,8 @@ ENTITY_HEALT = {
     'Level2Bg8': 999,
     'Player1'  : 300,
     'Player2'  : 300,
-    'Enemy1'    : 60,
-    'Enemy2'    : 90,
+    'Enemy1'    : 70,
+    'Enemy2'    : 100,
     'Player1Shot': 1,
     'Player2Shot': 1,
 }
@@ -116,8 +116,8 @@ ENTITY_SCORE = {
 }
 
 ENTITY_SHOT_DELAY = {
-    'Player1' : 20,
-    'Player2' : 20,
+    'Player1' : 35,
+    'Player2' : 35,
 }
 
 #F
@@ -126,7 +126,7 @@ FPS = 60
 #M
 MENU_OPTION = ('NEW GAME',
                'COOPERATIVE MODE',
-               'CARACTER SELECT',
+               'HOW TO PLAY',
                'SCORE',
                'EXIT')
 
@@ -147,12 +147,12 @@ PLAYER_KEY_SHOOT = {'Player1' : pg.K_RCTRL,
                  'Player2' : pg.K_LCTRL}
 
 #S
-SPAWN_TIME = 3000
+SPAWN_TIME = 2000
 
 #T
-TIMEOUT_LEVEL = 10000
+TIMEOUT_LEVEL = 30000
 TIMEOUT_STEP = 100
 
 #W
-WIN_WIDTH = 1200
-WIN_HEIGHT = 800
+WIN_WIDTH = 600
+WIN_HEIGHT = 400

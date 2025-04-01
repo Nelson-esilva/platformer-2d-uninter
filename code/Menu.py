@@ -1,7 +1,7 @@
 from tkinter.font import Font
 import pygame as pg
 
-from code.Const import COLOR_ORANGE, COLOR_WHITE, COLOR_YELLOW, MENU_OPTION
+from code.Const import COLOR_ORANGE, COLOR_WHITE, COLOR_YELLOW, MENU_OPTION, WIN_WIDTH
 
 class Menu:
 
@@ -17,13 +17,13 @@ class Menu:
         pg.mixer_music.play(-1)
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(50, "The Scientist's Hunt", COLOR_ORANGE, (600,130))
+            self.menu_text(30, "Bloodsteel Chronicles", COLOR_ORANGE, (WIN_WIDTH/2,60))
             
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
-                    self.menu_text(30, MENU_OPTION[i], COLOR_YELLOW, (200,400 + 30*i))
+                    self.menu_text(10, MENU_OPTION[i], COLOR_YELLOW, (100,200 + 30*i))
                 else:
-                    self.menu_text(30, MENU_OPTION[i], COLOR_WHITE, (200,400 + 30*i))
+                    self.menu_text(10, MENU_OPTION[i], COLOR_WHITE, (100,200 + 30*i))
         
             
             #Check for all events

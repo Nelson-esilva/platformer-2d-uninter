@@ -6,9 +6,8 @@ Um jogo de plataforma 2D desenvolvido em Python com a biblioteca [Pygame](https:
 
 ## 📸 Captura de Tela
 
-> *(adicione aqui uma imagem do jogo, como um GIF ou screenshot)*
-
----
+*![image](https://github.com/user-attachments/assets/d7dde1c5-9ffb-4ea7-94a3-7905764dee34)
+*
 
 ## 🎮 Como Jogar
 
